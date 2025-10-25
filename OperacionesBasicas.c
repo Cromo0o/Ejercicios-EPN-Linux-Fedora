@@ -1,3 +1,4 @@
+//Operaciones basicas en C utilizando solo dos variables
 #include <stdio.h>
 
 int main(void){
@@ -11,6 +12,7 @@ int main(void){
 
     {
 
+        //El operador mod solo admite valores enteros        
         int a = 10, b = 4;
 
         printf("a && b = %d\n", a % b);
