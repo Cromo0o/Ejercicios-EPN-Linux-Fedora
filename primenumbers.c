@@ -17,37 +17,27 @@ int main(void){
     printf(">>");
     scanf("%d",&n);
 
-    if( n > 0 ){
-
-        d = 1;
-        verificarPrimo = 0;
+    if( n > 1 ){
+        
+        d = 2;
+        verificarPrimo = 1; //Asumimos que es primo hasta verificar lo contrario
         
         while ( d <= trunc(sqrt(n)) ){
-
+            residuoDivision = n % d;    //Si al dividir n de 2 en adelante, queda uno residuo 0, no es primo
             
-            residuoDivision = n % d;
-            //verificarPrimo = verificarPrimo + residuoDivision; 
-            
-            printf("%d",residuoDivision);
+            if(residuoDivision == 0){
+                verificarPrimo = 0;     //El numero no es primo, se hace 0
+                break;
+            }
             d++;
-
         }
         
-                
-
-
-        /*
-        if ( verificarPrimo == 0 ){
-
-            printf("%d",verificarPrimo);
-            
-            printf("\nEl numero %d es primo\n", n);
+        if(verificarPrimo == 1){
+            printf("El numero %d es un número primo.\n", n);
+        
+        }else{
+            printf("El numero %d no es un número primo.\n", n);
         }
-        else{
-            printf("%d",verificarPrimo);
-            printf("\nEl numero %d no es primo\n", n);
-        }
-        */
     }
     else{
 
