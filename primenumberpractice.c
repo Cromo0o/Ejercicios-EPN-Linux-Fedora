@@ -21,7 +21,7 @@ int main(void){
         printf("Que sea mayor o igual que uno\n");
 
     }
-    else if( n = 1 ){
+    else if( n == 1 ){
 
         printf("El numero 1 no es primo\n");
         printf("Si bien cumple que dividir para 1 y para si mismo resulta en una division exacta,\n");
@@ -38,18 +38,23 @@ int main(void){
             
             resto = n % d;
             
-            if(resto = 0){ 
+            if(resto == 0){ 
                 
-                printf("El numero no es primo");
+                verificarPrimo = 0;
+                break;
             
             }
-            else{
-
-                printf("El numero es primo");
-
-            }
-
             d++;
+        }
+
+        if( verificarPrimo == 0){
+
+            printf("El numero no es primo\n");
+
+        }
+        else{   
+
+            printf("El numero es primo");
 
         }
 
