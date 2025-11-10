@@ -15,7 +15,7 @@ int main(void){
 
     if(oroA>oroB){
 
-        print("El equipo A es el ganador por medallas de oro");
+        printf("El equipo A es el ganador por medallas de oro");
 
     }
     else if(oroA<oroB){
@@ -39,7 +39,7 @@ int main(void){
 
             if(bronceA>bronceB){
 
-                print("El equipo A es el ganador por medalals de bronce");
+                printf("El equipo A es el ganador por medalals de bronce");
 
             }
             else if (bronceA<bronceB){
