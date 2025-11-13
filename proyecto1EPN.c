@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-struct productos{       
+struct productos{    
         
     char marca[30];
     float precio;
@@ -17,9 +17,21 @@ int main(void){
     float iva = 1.15;   // (15%  -> 1.15)  (8% -> 1.08)    (0% -> 1.00)
     
 
-
     struct productos lacteos[10];     //Primer producto el cual viene en la caja
     struct productos granos[10];
+    struct productos vegetales[10];
+
+
+
+
+
+
+
+
+
+
+
+
 
     
     printf("Que tipo de producto desea ingresar\n");
