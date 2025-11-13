@@ -48,7 +48,7 @@ int main(void){
 
 skip:
     
-    printf("\nJumped to the 'skip' label %s","when i equals 3.");
+    printf("\nJumped to the 'skip' label %s","when i equals 3.\n");
     
 
     return 0;
