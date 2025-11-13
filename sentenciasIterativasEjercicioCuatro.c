@@ -3,13 +3,14 @@
 
 int main(void){
 
-   int i;
-   int sum = 0;
+    int i;
+    int sum = 0;
 
-   for ( i = 5; i > 0; i--)
-   {
+    for ( i = 5; i > 0; i--){
+
         printf("%d\n", i);
 
-   }
+    }
+
     return 0;
 }
