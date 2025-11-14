@@ -11,7 +11,7 @@ struct productos{
 
 int main(void){
 
-    int i = 0;  //cantidad inicial de productos en cada caso
+    int i; 
     int n;  //cantidad de productos a ingresar en cada caso
     int opcion;
     float iva = 1.15;   // (15%  -> 1.15)  (8% -> 1.08)    (0% -> 1.00)
@@ -20,22 +20,9 @@ int main(void){
     struct productos lacteos[10];     //Primer producto el cual viene en la caja
     struct productos granos[10];
     struct productos vegetales[10];
-
-
-
-
-
-
-
-
-
-
-
-
-
     
     printf("Que tipo de producto desea ingresar\n");
-    printf("1. Lacteos\n2. Granos\n");
+    printf("1. Lacteos\n2. Granos\n3. vegetales\n");
     printf(">>");
     scanf("%d", &opcion);
     
@@ -45,19 +32,16 @@ int main(void){
 
             printf("Cuantos lacteos desea ingresar: \n");
             scanf("%d", &n);
-            
-            while (i < n){  //Hasta que registre la cantidad deseada de productos
+
+            for ( i = 0; i < n; i++){
                 
-                //Empieza a registrar cada producto desde el 0 hasta los deseados
-                // se guarda en lacteos[0] el primero
-                // en lacteos[1] el segundo y así sucesivamente
-                 
-                printf("Digite la marca del producto: \n");
+                printf("Digite la marca del prodcuto: \n");
                 printf(">>");
-                getchar();  //Para que se lea el dato y no el salto de linea
+                getchar();
                 fgets(lacteos[i].marca, sizeof(lacteos[i].marca), stdin);
-                i++;    //Se suma 1 mas hasta que llegue a la cantidad deseada de productos
+
             }
+            
 
 
             printf("%s", lacteos[0].marca);
@@ -68,26 +52,43 @@ int main(void){
 
         case 2:
 
-            while (i < n){  //Hasta que registre la cantidad deseada de productos
+            printf("Cuantos prodcutos tipo grano desea ingresar: \n");
+            scanf("%d", &n);
+        
+            for ( i = 0; i < n; i++){
                 
-                //Empieza a registrar cada producto desde el 0 hasta los deseados
-                // se guarda en lacteos[0] el primero
-                // en lacteos[1] el segundo y así sucesivamente
-                 
-                printf("Digite la marca del producto: \n");
+                printf("Digite la marca del prodcuto: \n");
                 printf(">>");
-                getchar();  //Para que se lea el dato y no el salto de linea
-                fgets(granos[i].marca, sizeof(granos[i].marca), stdin);
-                i++;    //Se suma 1 mas hasta que llegue a la cantidad deseada de productos
+                getchar();
+                fgets(lacteos[i].marca, sizeof(lacteos[i].marca), stdin);
+
             }
             
             break;
+        case 3:
+            
+            printf("Cuantos vegetales desea ingresar: \n");
+            scanf("%d", &n);
+
+            for (i = 0; i < n; i++){
+                printf("Digite el producto que desa comprar: \n");
+                printf(">>");
+                getchar();
+                fgets(vegetales[i].marca, sizeof(vegetales[i].marca), stdin);
+            }
+            printf("%s", vegetales[0].marca);
+            printf("%s", vegetales[1].marca);
+            printf("%s", vegetales[2].marca);
+
+            break;
+
     
         default:
     
             printf("Pan con queso\n");
     
             break;
+            
     }
 
 

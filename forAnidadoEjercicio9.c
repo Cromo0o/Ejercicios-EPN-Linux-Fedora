@@ -14,22 +14,34 @@ B W B W B W B W
 int main(void){
 
 
-    for (int i = 1; i <= 8; i++){
+    for (int i = 1; i <= 5; i++){
         
-        for (int j = 1; j <= 8; j++){
+        for (int j = 1; j <= 4; j++){
 
             if( (i % 2) == 0){
 
-            printf("B ");
+                printf("B ");
+            
             }
             else{
 
-            printf("W ");
+                printf("W ");
 
             }
             
         }
         
+        if( (i % 2) == 0){
+
+                printf("W ");
+            
+            }
+            else{
+
+                printf("B ");
+
+            }
+
         printf("\n");
         
     }
