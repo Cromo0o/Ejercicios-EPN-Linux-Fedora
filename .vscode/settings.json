@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "sentenciasIterativasEjercicio4.C": "cpp",
-        "sentControlUnido.C": "cpp"
+        "sentControlUnido.C": "cpp",
+        "secuenciaIterativaJuego.C": "cpp"
     }
 }
