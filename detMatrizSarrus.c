@@ -2,7 +2,9 @@
 
 int main(void){
 
-    int matriz[3][3];
+
+    //arr = {1, 2, 3}, pero se lee el 1 como el valor 0, el 2 como el valor 1 y el 3 como el valor 2
+    int matriz[3][3];   //matriz de 3 filas y 3 columnas //Numero de elementos
     int i, j;
     long determinante;
 
@@ -20,6 +22,7 @@ int main(void){
 
     }
 
+    //Mostrar la matriz ingresada en la terminal
     printf("\nMatriz ingresada:\n");
     for ( i = 0; i < 3; i++){
         
@@ -31,12 +34,18 @@ int main(void){
         printf("\n");
 
     }
-    
+
+    //Calcular el determinante (Regla de Sarrus)
+    //Sarrus: (a11*a22*a33 + a12*a23*a31 +.........
+
+
+    //Suma de las diagonales principales (positivas)
     long positivos = (long)matriz[0][0] * matriz[1][1] * matriz[2][2] +
                      (long)matriz[0][1] * matriz[1][2] * matriz[2][0] + 
                      (long)matriz[0][2] * matriz[1][0] * matriz[2][1];
 
 
+    //Suma de las diagonales principales (negativas)
     long negativos = (long)matriz[0][2] * matriz[1][1] * matriz[2][0] +
                      (long)matriz[0][0] * matriz[1][2] * matriz[2][1] + 
                      (long)matriz[0][1] * matriz[1][0] * matriz[2][2];

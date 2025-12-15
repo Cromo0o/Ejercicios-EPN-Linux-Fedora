@@ -2,6 +2,7 @@
     "files.associations": {
         "sentenciasIterativasEjercicio4.C": "cpp",
         "sentControlUnido.C": "cpp",
-        "secuenciaIterativaJuego.C": "cpp"
+        "secuenciaIterativaJuego.C": "cpp",
+        "trianguloPascal.C": "cpp"
     }
 }
